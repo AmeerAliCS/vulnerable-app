@@ -1,13 +1,15 @@
 const mysql = require('mysql');
 
+// إعداد الاتصال باستخدام المتغيرات من Railway
 const db = mysql.createConnection({
-    host: 'mysql.railway.internal', // عنوان الخادم (MYSQLHOST)
-    user: 'root',                  // اسم المستخدم (MYSQLUSER)
-    password: "nfrXyKdTAGHhrrHBVgJLsABqLGahvQAf", // كلمة المرور (MYSQLPASSWORD)
-    database: 'railway',           // اسم قاعدة البيانات (MYSQL_DATABASE)
-    port: 3306                     // المنفذ (MYSQLPORT)
+    host: 'mysql.railway.internal', // MYSQLHOST
+    user: 'root',                  // MYSQLUSER
+    password: 'nfrXyKdTAGHhrrHBVgJLsABqLGahvQAf', // MYSQLPASSWORD
+    database: 'railway',           // MYSQLDATABASE
+    port: 3306                     // MYSQLPORT
 });
 
+// الاتصال بقاعدة البيانات
 db.connect((err) => {
     if (err) {
         console.error('❌ خطأ في الاتصال بقاعدة البيانات:', err);
