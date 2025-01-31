@@ -1,10 +1,11 @@
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
-    host: 'localhost', // عنوان الخادم
-    user: 'root',      // اسم المستخدم
-    password: "123456", // كلمة المرور
-    database: 'vulnerable_db'  // اسم قاعدة البيانات
+    host: 'mysql.rw.rly.internal', // عنوان الخادم (MYSQLHOST)
+    user: 'root',                  // اسم المستخدم (MYSQLUSER)
+    password: "nfrXyKdTAGHhrrHBVgJLsABqLGahvQAf", // كلمة المرور (MYSQLPASSWORD)
+    database: 'railway',           // اسم قاعدة البيانات (MYSQL_DATABASE)
+    port: 3306                     // المنفذ (MYSQLPORT)
 });
 
 db.connect((err) => {
