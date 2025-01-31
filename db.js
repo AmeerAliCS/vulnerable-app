@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
-    host: 'mysql.rw.rly.internal', // عنوان الخادم (MYSQLHOST)
+    host: 'mysql.railway.internal', // عنوان الخادم (MYSQLHOST)
     user: 'root',                  // اسم المستخدم (MYSQLUSER)
     password: "nfrXyKdTAGHhrrHBVgJLsABqLGahvQAf", // كلمة المرور (MYSQLPASSWORD)
     database: 'railway',           // اسم قاعدة البيانات (MYSQL_DATABASE)
