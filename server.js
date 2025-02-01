@@ -110,7 +110,8 @@ app.post("/brute-force", async (req, res) => {
 });
 
 // تشغيل الخادم
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 8080; // استخدم المنفذ الصحيح
+app.listen(PORT, "0.0.0.0", () => {
     console.log(`🚀 الخادم يعمل على http://localhost:${PORT}`);
 });
+
