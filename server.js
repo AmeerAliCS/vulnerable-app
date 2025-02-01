@@ -10,11 +10,12 @@ app.use(bodyParser.json());
 
 // إعداد الاتصال بقاعدة البيانات
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "123456",
-  database: "vulnerable_db",
-});
+    host: 'mysql.railway.internal', // MYSQLHOST
+    user: 'root',                  // MYSQLUSER
+    password: 'nfrXyKdTAGHhrrHBVgJLsABqLGahvQAf', // MYSQLPASSWORD
+    database: 'railway',           // MYSQLDATABASE
+    port: 3306                     // MYSQLPORT
+  });
 
 db.connect((err) => {
   if (err) {
@@ -86,6 +87,7 @@ app.post("/brute-force", (req, res) => {
 });
 
 // تشغيل الخادم
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000; // استخدام المنفذ من متغيرات البيئة أو الافتراضي 3000
+app.listen(PORT, () => {
   console.log("الخادم يعمل على http://localhost:3000");
 });
